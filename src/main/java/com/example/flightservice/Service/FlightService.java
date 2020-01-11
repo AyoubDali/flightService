@@ -28,4 +28,20 @@ public class FlightService {
         flightRepository.save(newFlight);
         return newFlight;
     }
+
+    @DeleteMapping(value = "/deleteFlight/{id}")
+    public String deleteFlight(@PathVariable Long id){
+
+        flightRepository.deleteById(id);
+        return "OK!" ;
+    }
+
+    @PutMapping(value = "/editFlight/{id}")
+    public Flight editFlight(@RequestBody Flight fightInfo, @PathVariable long id){
+
+        Flight flight = flightRepository.findById(id);
+        flight.setDepartureTime(fightInfo.getDepartureTime());
+        flightRepository.save(flight);
+        return flight ;
+    }
 }

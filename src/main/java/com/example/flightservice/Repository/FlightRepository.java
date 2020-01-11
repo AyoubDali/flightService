@@ -8,4 +8,5 @@ import org.springframework.data.rest.webmvc.RepositoryRestController;
 
 @RepositoryRestController
 public interface FlightRepository extends JpaRepository<Flight,Long> {
+    Flight findById(long id);
 }
