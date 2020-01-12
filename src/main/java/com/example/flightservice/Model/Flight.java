@@ -21,10 +21,10 @@ public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    //private String departure;
-    //private String destination;
+    private String departure;
+    private String destination;
     private String departureTime;
-    //private String arriveTime;
+    private String arriveTime;
     private long freePlaces;
 
 

@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/Service")
+@RequestMapping("/api/FlightService")
 public class FlightService {
 
 
@@ -23,7 +23,7 @@ public class FlightService {
         return (flightList);
     }
 
-    @PostMapping(value = "/saveFlight")
+    @PostMapping(value = "/addNewFlight")
     public Flight newFlight(@RequestBody Flight newFlight){
         flightRepository.save(newFlight);
         return newFlight;
