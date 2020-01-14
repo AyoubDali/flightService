@@ -22,7 +22,7 @@ public class FlightserviceApplication {
     CommandLineRunner start(FlightRepository flightRepository){
         return args->{
             Stream.of("Paris","Belgique","Germany").forEach(dp->{
-                flightRepository.save(new Flight(0,dp,dp,dp,dp,20));
+                flightRepository.save(new Flight(0,dp,dp,dp,dp,1,0));
             });
 
             flightRepository.findAll().forEach(System.out::println);

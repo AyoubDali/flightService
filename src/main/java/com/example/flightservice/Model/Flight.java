@@ -25,7 +25,10 @@ public class Flight {
     private String destination;
     private String departureTime;
     private String arriveTime;
-    private long freePlaces;
+   // private long freePlaces;
+    private long planeId;
+    private float price;
+
 
 
 }
